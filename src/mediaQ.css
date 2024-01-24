@@ -1,0 +1,8 @@
+/* @media (max-width: 1000px) {
+    .taskTitle {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 60px;
+        padding-left: 10px;
+      }
+} */

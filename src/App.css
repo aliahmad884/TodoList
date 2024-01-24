@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+body {
+  background-color: #e0f4ff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainContainer {
+  /* padding-top: 150px; */
+  margin: auto;
+  max-width: 1000px;
+  min-width: 600px;
+  padding: 150px 20px 0 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.outer {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  padding: 20px 10px;
+  background-color: #04364a;
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
   color: white;
+  line-height: 0.2rem;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+header img {
+  width: 70px;
+}
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: white;
+  padding-top: 20px;
+}
+.addBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addBtn {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  background-color: #3876bf;
+  width: 270px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 15px 0;
+  border-radius: 3px;
+}
+.addBtn:hover {
+  background-color: #04364a;
+  transition: all 0.3s ease-in-out;
+}
+.taskArea {
+  padding: 0 50px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.taskArea::-webkit-scrollbar {
+  width: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.taskArea::-webkit-scrollbar-track {
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taskArea::-webkit-scrollbar-thumb {
+  background-color: #e0f4ff;
+  border: 3px solid #d1e5ff;
+  border-radius: 10px;
+}
+.tasks {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  border-bottom: 1px solid #b2c8ba;
+}
+.taskTitle {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 60px;
+  padding-left: 50px;
+}
+.taskTitle p {
+  color: green;
+  font-weight: bold;
+  padding-top: 5px;
+}
+.trashBtn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  right: 50px;
+}
+.trashBtn:hover {
+  transform: scale(1.1);
+  animation-direction: alternate;
+  transition: all 0.2s ease-in-out;
+}
+.inputImage {
+  padding-top: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+.completed {
+  text-decoration: line-through black;
+  color: darkgrey;
+}
+.newTask {
+  display: none;
+}
+.show {
+  display: block;
+}
+.newTaskContainer {
+  display: flex;
+  padding: 17px 50px 0px 50px;
+}
+.taskInput {
+  outline: none;
+  /* border: none;
+  border-bottom: 1px solid #b2c8ba; */
+  height: 30px;
+  width: 70%;
+  font-size: 1rem;
+}
+.newTask button {
+  border: none;
+  outline: none;
+  margin: 0 5px;
+  width: 70px;
+  color: white;
+  cursor: pointer;
+}
+.btnSave {
+  background-color: #3876bf;
+  border-radius: 3px;
+}
+.btnSave:hover {
+  background-color: #04364a;
+  transition: all 0.3s ease-in-out;
+}
+.btnDiscard {
+  background-color: #ff9843;
+  border-radius: 3px;
+}
+.btnDiscard:hover {
+  background-color: #b2533e;
+  transition: all 0.3s ease-in-out;
+}
+table {
+  width: 100%;
+}
+tbody {
+  line-height: 0rem;
+}
+th {
+  text-align: center;
+  font-size: 1.1rem;
+}
+td {
+  text-align: center;
+}
+tbody i {
+  padding: 15px;
+  margin: 0 2px;
+  width: 20px;
+  /* color:#04364a; */
+  cursor: pointer;
+}
+.statusText {
+  color: #3876bf;
+  font-weight: bold;
+}
+.completedText {
+  color: green;
+  font-weight: bold;
+}
+.editInput {
+  outline: none;
+  height: 30px;
+  font-size: 1rem;
+  display: flex;
+  border:none;
+  border-bottom:1px solid;
+}
+.editDateInput {
+  outline: none;
+  height: 30px;
+  font-size: 1rem;
+  display: flex;
+  border:none;
+  border-bottom:1px solid;
+  display:none;
+}
+.none {
+  display: none;
+}
+.editContainer {
+  display: none;
+  flex-direction: row-reverse;
+  justify-content:left;
+  gap:10px;
+}
+.btnEditSave {
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: white;
+  background-color: #3876bf;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.showContainer {
+  display: flex;
 }
